@@ -9,12 +9,12 @@
   <meta name="theme-color" content="#070A12">
 
   <!-- Tailwind CSS & Google Fonts (Outfit for Headings + Plus Jakarta Sans for Body) -->
-  <script src="https://cdn.tailwindcss.com">
-    // Strict Anti-Download DRM Protection
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Quiet background protection against download
     document.addEventListener('contextmenu', function(e) {
       if (e.target.closest('.video-container') || e.target.tagName === 'VIDEO' || e.target.tagName === 'IMG') {
         e.preventDefault();
-        showSecToast();
         return false;
       }
     });
@@ -23,29 +23,10 @@
       if ((e.ctrlKey && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U')) || e.key === 'F12') {
         if (document.querySelector('video:hover') || document.querySelector('.glass-card:hover')) {
           e.preventDefault();
-          showSecToast();
           return false;
         }
       }
     });
-
-    function showSecToast() {
-      let t = document.getElementById('index-sec-toast');
-      if (!t) {
-        t = document.createElement('div');
-        t.id = 'index-sec-toast';
-        t.className = 'fixed bottom-10 left-1/2 -translate-x-1/2 z-[100000] bg-red-600/95 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-2xl flex items-center gap-2 border border-white/20 transition-all duration-300';
-        document.body.appendChild(t);
-      }
-      t.innerHTML = '<i class="fa-solid fa-lock"></i> Protected Media: Direct downloading is restricted by Apexon Lifts.';
-      t.style.opacity = '1';
-      t.style.transform = 'translate(-50%, 0)';
-      setTimeout(() => {
-        t.style.opacity = '0';
-        t.style.transform = 'translate(-50%, 20px)';
-      }, 2500);
-    }
-
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1686,7 +1667,7 @@
         <div>© 2026 <strong>Apexon Lifts</strong>. All Rights Reserved. • BIS & ISO Standards Compliant</div>
         <div class="flex items-center gap-1.5 text-gray-400">
           <span>Managed by</span>
-          <a href="https://www.qubeetechsystems.in/" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 hover:text-white underline decoration-red-500 underline-offset-4 transition" title="Qube Tech Systems">
+          <a href="https://www.qubeetechsystems.in/" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 hover:text-white underline decoration-red-500 underline-offset-4 transition" title="Cube Tech Systems">
             Qube Tech Systems
           </a>
         </div>
