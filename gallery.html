@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Media Gallery | Apexon Lifts - Live Installation Videos & Real Project Sites</title>
+  <meta name="description" content="Watch authentic live installation video showcase and on-ground project photos of Apexon Lifts across Uttar Pradesh. Hospitals, schools, luxury hotels and residential elevators.">
+  <meta name="theme-color" content="#070A12">
+
+  <!-- Tailwind CSS & Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden !important;
+      margin: 0;
+      padding: 0;
+      background-color: #070A12;
+      color: #F1F5F9;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif !important;
+      letter-spacing: -0.02em;
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.35s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(229, 57, 53, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px -10px rgba(229, 57, 53, 0.22);
+    }
+    .btn-apex {
+      background: linear-gradient(135deg, #E53935 0%, #B71C1C 100%);
+      color: #FFFFFF;
+      font-weight: 700;
+      box-shadow: 0 4px 20px rgba(229, 57, 53, 0.35);
+      transition: all 0.3s ease;
+    }
+    .btn-apex:hover {
+      box-shadow: 0 6px 26px rgba(229, 57, 53, 0.55);
+      transform: translateY(-1px);
+    }
+
+    /* Video Protection */
+    .secure-video-wrapper {
+      position: relative;
+      background: #000000;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    video::-internal-media-controls-download-button {
+      display: none !important;
+    }
+    video::-webkit-media-controls-enclosure {
+      overflow: hidden;
+    }
+
+    /* Chapter Card Active State */
+    .chapter-card.active {
+      border-color: #E53935;
+      background: rgba(229, 57, 53, 0.12);
+      box-shadow: 0 0 20px rgba(229, 57, 53, 0.25);
+    }
+
+    /* Lightbox Modal */
+    #lightbox-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body class="bg-[#070A12] text-gray-100 min-h-screen flex flex-col selection:bg-red-600 selection:text-white">
+
+  <!-- TOP EMERGENCY & SOS TICKER -->
+  <header class="bg-gradient-to-r from-red-950 via-red-900 to-black text-white text-xs border-b border-red-900/50 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-600/90 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 Breakdown SOS
+        </span>
+        <span class="hidden md:inline text-gray-300 font-medium text-[11px]">Direct Lift Manufacturer &amp; Service Network in Uttar Pradesh</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-bold">
+        <a href="tel:+918604813332" class="hover:text-red-300 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone-volume text-red-400"></i> +91 86048 13332
+        </a>
+        <a href="https://wa.me/917014059334" target="_blank" class="text-green-400 hover:text-green-300 transition flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp text-sm"></i> <span class="hidden sm:inline">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <nav class="bg-[#070A12]/95 backdrop-blur-xl border-b border-gray-800/80 sticky top-[37px] z-40">
+    <div class="max-w-7xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full p-0.5 bg-gradient-to-tr from-red-600 to-amber-500 shadow-lg group-hover:scale-105 transition">
+          <img src="assets/images/clients/../apexon-logo.jpg" onerror="this.src='assets/images/clients/hotel-mewar-inn.jpg'" alt="Apexon Lifts Logo" class="w-full h-full object-cover rounded-full bg-white">
+        </div>
+        <div>
+          <div class="flex items-center">
+            <span class="text-xl sm:text-2xl font-black text-white font-heading tracking-tight">APEXON</span>
+            <span class="text-xl sm:text-2xl font-black text-red-500 font-heading tracking-tight ml-1">LIFTS</span>
+          </div>
+          <p class="text-[9px] uppercase tracking-widest text-gray-400 -mt-1 font-semibold">Elevating Standards • Safety First</p>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden lg:flex items-center space-x-6 text-sm font-semibold">
+        <a href="index.html#home" class="hover:text-red-400 transition">Home</a>
+        <a href="index.html#valuable-customers" class="hover:text-red-400 transition">Our Customers</a>
+        <a href="index.html#products" class="hover:text-red-400 transition">Elevator Models</a>
+        <a href="index.html#calculator-section" class="hover:text-red-400 transition">Calculator</a>
+        <a href="index.html#projects-section" class="hover:text-red-400 transition relative">
+          30+ Sites <span class="bg-red-600 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold ml-0.5">Verified</span>
+        </a>
+        <a href="gallery.html" class="text-red-500 hover:text-red-400 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-photo-film"></i> Gallery <span class="bg-red-600 text-white text-[9px] px-1.5 py-0.2 rounded-full font-bold">Showcase</span>
+        </a>
+        <a href="index.html#contact-section" class="hover:text-red-400 transition">Contact</a>
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="index.html#calculator-section" class="hidden sm:inline-flex btn-apex px-4 py-2 rounded-xl text-xs uppercase tracking-wider items-center gap-1.5">
+          <i class="fa-solid fa-calculator"></i> Get Free Quote
+        </a>
+        <button id="mobile-menu-toggle" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-gray-900 border border-gray-700 text-white hover:border-red-500 transition">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 bg-[#070A12]/98 backdrop-blur-2xl p-6 flex flex-col justify-between z-[99999] transition-all duration-300" style="display: none;">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-gray-800">
+        <div class="flex items-center gap-2">
+          <span class="text-xl font-black text-white font-heading">APEXON</span>
+          <span class="text-xl font-black text-red-500 font-heading">LIFTS</span>
+        </div>
+        <button id="mobile-drawer-close" class="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 text-gray-400 hover:text-white flex items-center justify-center text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-3.5 py-6 text-sm font-semibold">
+        <a href="index.html#home" class="py-2.5 text-white hover:text-red-400 border-b border-gray-800/60 flex items-center gap-3"><i class="fa-solid fa-house text-gray-400 w-5"></i> Home</a>
+        <a href="gallery.html" class="py-2.5 text-red-500 font-bold border-b border-gray-800/60 flex items-center gap-3"><i class="fa-solid fa-photo-film text-red-500 w-5"></i> Media Gallery (Showcase &amp; Photos)</a>
+        <a href="index.html#valuable-customers" class="py-2.5 text-white hover:text-amber-400 border-b border-gray-800/60 flex items-center gap-3"><i class="fa-solid fa-crown text-amber-400 w-5"></i> Our Customers (Verified Sites)</a>
+        <a href="index.html#products" class="py-2.5 text-white hover:text-blue-400 border-b border-gray-800/60 flex items-center gap-3"><i class="fa-solid fa-elevator text-blue-400 w-5"></i> Elevator Models</a>
+        <a href="index.html#calculator-section" class="py-2.5 text-white hover:text-emerald-400 border-b border-gray-800/60 flex items-center gap-3"><i class="fa-solid fa-calculator text-emerald-400 w-5"></i> Cost Calculator</a>
+        <a href="index.html#projects-section" class="py-2.5 text-white hover:text-purple-400 border-b border-gray-800/60 flex items-center gap-3"><i class="fa-solid fa-city text-purple-400 w-5"></i> 30+ Landmark UP Sites</a>
+        <a href="index.html#contact-section" class="py-2.5 text-white hover:text-red-400 flex items-center gap-3"><i class="fa-solid fa-phone text-red-500 w-5"></i> Contact &amp; Direct Inquiry</a>
+      </div>
+    </div>
+    <div class="pt-4 border-t border-gray-800 space-y-2">
+      <a href="tel:+918604813332" class="btn-apex w-full py-3 rounded-xl font-bold text-center block text-xs uppercase tracking-wider">
+        <i class="fa-solid fa-phone mr-1.5"></i> Call Santosh Kashyap: 86048 13332
+      </a>
+      <a href="https://wa.me/917014059334" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl text-center block text-xs uppercase tracking-wider transition">
+        <i class="fa-brands fa-whatsapp mr-1.5 text-sm"></i> WhatsApp Support
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="relative py-14 sm:py-20 px-4 bg-gradient-to-b from-gray-950 via-[#070A12] to-[#070A12] border-b border-gray-800/80 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#E53935_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <span class="inline-flex items-center gap-2 bg-red-600/10 border border-red-500/30 px-4 py-1.5 rounded-full text-xs font-semibold text-red-400 mb-4 shadow">
+        <i class="fa-solid fa-shield-halved text-emerald-400"></i> DRM Protected Media Gallery
+      </span>
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white font-heading tracking-tight leading-tight">
+        Complete Live Video Showcase &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-amber-400">On-Ground Photos</span>
+      </h1>
+      <p class="mt-4 text-sm sm:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        Watch all 6 live engineering field demonstrations in one seamless master showcase, and view authentic uncropped site photos from installations across Uttar Pradesh.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 1: UNIFIED MASTER VIDEO PLAYER WITH CHAPTER SELECTOR
+       ======================================================== -->
+  <section id="master-video-section" class="py-14 px-4 max-w-7xl mx-auto w-full">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-gray-800">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-red-500">All-in-One Field Demonstration</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-heading mt-1">
+          Live Installation Video Showcase (All 6 Demos)
+        </h2>
+        <p class="text-gray-400 text-xs sm:text-sm mt-1">
+          Click any chapter below to jump directly to that site's live demonstration.
+        </p>
+      </div>
+      <div class="mt-3 md:mt-0 flex items-center gap-2 bg-red-950/40 border border-red-500/30 px-3 py-1.5 rounded-full text-xs font-semibold text-red-400 w-fit">
+        <i class="fa-solid fa-lock"></i> Protected View • Right-Click &amp; Direct Download Disabled
+      </div>
+    </div>
+
+    <!-- Master Player Container + Chapter Sidebar Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+      <!-- LEFT: CINEMA MASTER VIDEO PLAYER (lg:col-span-7) -->
+      <div class="lg:col-span-7 space-y-4">
+        <div class="secure-video-wrapper rounded-3xl overflow-hidden border border-gray-800 shadow-2xl relative" oncontextmenu="return false;">
+          <video 
+            id="master-video" 
+            class="w-full aspect-[9/14] sm:aspect-video md:aspect-[9/13] max-h-[640px] object-contain bg-black" 
+            preload="metadata" 
+            playsinline 
+            webkit-playsinline
+            controlsList="nodownload nofullscreen noremoteplayback" 
+            disablePictureInPicture 
+            oncontextmenu="return false;"
+            poster="assets/images/clients/hotel-mewar-inn.jpg"
+          >
+            <source src="assets/videos/apexon-complete-showcase.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          
+          <!-- Anti-download shield overlay -->
+          <div class="video-shield absolute inset-0 z-20 pointer-events-none" oncontextmenu="return false;"></div>
+
+          <!-- Top Watermarks -->
+          <div class="absolute top-3 left-3 z-30 flex items-center gap-2 bg-black/75 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 pointer-events-none">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            <span id="live-chapter-badge" class="text-[10px] font-bold text-white uppercase tracking-wider">Demo 1 • Hospital Bed Lift</span>
+          </div>
+
+          <div class="absolute top-3 right-3 z-30 bg-black/75 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-semibold text-gray-300 border border-white/5 pointer-events-none">
+            <i class="fa-solid fa-shield-halved text-emerald-400 mr-1"></i> DRM Protected
+          </div>
+
+          <!-- Center Big Play Button -->
+          <button id="master-play-btn" class="absolute inset-0 z-25 flex items-center justify-center bg-black/35 hover:bg-black/15 transition cursor-pointer" onclick="toggleMasterPlay()">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-red-600/95 text-white flex items-center justify-center text-2xl shadow-2xl border border-white/20 transition hover:scale-110">
+              <i class="fa-solid fa-play ml-1"></i>
+            </div>
+          </button>
+        </div>
+
+        <!-- Video Active Status & Current Chapter Info -->
+        <div class="p-4 rounded-2xl bg-gray-900/90 border border-gray-800 flex items-center justify-between">
+          <div>
+            <h4 id="current-title" class="text-sm font-bold text-white font-heading">Chapter 1: Medical Bed &amp; Stretcher Elevator Operation</h4>
+            <p id="current-location" class="text-xs text-gray-400 mt-0.5"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Jograj Memorial Heart Hospital, Badhpur, Farrukhabad</p>
+          </div>
+          <span class="text-emerald-400 text-xs font-bold px-2.5 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20 whitespace-nowrap">
+            <i class="fa-solid fa-check-circle mr-1"></i> Active Site
+          </span>
+        </div>
+      </div>
+
+      <!-- RIGHT: INTERACTIVE CHAPTER SELECTOR LIST (lg:col-span-5) -->
+      <div class="lg:col-span-5 space-y-3">
+        <div class="flex items-center justify-between pb-2 border-b border-gray-800">
+          <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Jump to Demonstration:</span>
+          <span class="text-[11px] text-red-400 font-semibold"><i class="fa-solid fa-hand-pointer mr-1"></i> 6 Live Chapters</span>
+        </div>
+
+        <!-- Chapter 1 -->
+        <button class="chapter-card active w-full text-left p-3.5 rounded-2xl border border-gray-800 bg-gray-900/60 hover:bg-gray-800/80 transition flex items-start gap-3" onclick="seekChapter(0.0, 'Chapter 1: Medical Bed & Stretcher Elevator Operation', 'Jograj Memorial Heart Hospital, Badhpur, Farrukhabad', this, 'Demo 1 • Hospital Lift')">
+          <div class="w-10 h-10 rounded-xl bg-red-600/20 border border-red-500/40 flex items-center justify-center text-red-400 font-black text-xs shrink-0 mt-0.5">
+            01
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-red-400">Hospital Stretcher Lift</span>
+              <span class="text-[10px] text-gray-400 font-mono">00:00</span>
+            </div>
+            <h5 class="text-xs font-bold text-white font-heading mt-0.5 truncate">Bed &amp; Stretcher Lift Operation</h5>
+            <p class="text-[11px] text-gray-400 mt-0.5 line-clamp-1">Wide telescopic doors &amp; micro-leveling.</p>
+          </div>
+        </button>
+
+        <!-- Chapter 2 -->
+        <button class="chapter-card w-full text-left p-3.5 rounded-2xl border border-gray-800 bg-gray-900/60 hover:bg-gray-800/80 transition flex items-start gap-3" onclick="seekChapter(14.09, 'Chapter 2: High-Speed Commercial Traction Shaft & Cabin', 'Commercial Hotel & Business Landmark, Shahjahanpur', this, 'Demo 2 • Commercial Lift')">
+          <div class="w-10 h-10 rounded-xl bg-amber-600/20 border border-amber-500/40 flex items-center justify-center text-amber-400 font-black text-xs shrink-0 mt-0.5">
+            02
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400">Commercial Passenger</span>
+              <span class="text-[10px] text-gray-400 font-mono">00:14</span>
+            </div>
+            <h5 class="text-xs font-bold text-white font-heading mt-0.5 truncate">High-Speed Traction Shaft &amp; Cabin</h5>
+            <p class="text-[11px] text-gray-400 mt-0.5 line-clamp-1">1.5 m/s VVVF gearless quiet vertical travel.</p>
+          </div>
+        </button>
+
+        <!-- Chapter 3 -->
+        <button class="chapter-card w-full text-left p-3.5 rounded-2xl border border-gray-800 bg-gray-900/60 hover:bg-gray-800/80 transition flex items-start gap-3" onclick="seekChapter(50.82, 'Chapter 3: Bespoke Residential Glass & Villa Home Lift', 'Elite Private Villa Residence, Fatehgarh', this, 'Demo 3 • Villa Home Lift')">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-black text-xs shrink-0 mt-0.5">
+            03
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400">Luxury Villa Residence</span>
+              <span class="text-[10px] text-gray-400 font-mono">00:50</span>
+            </div>
+            <h5 class="text-xs font-bold text-white font-heading mt-0.5 truncate">Bespoke Residential Villa Home Lift</h5>
+            <p class="text-[11px] text-gray-400 mt-0.5 line-clamp-1">Silent operation (&lt;48dB) &amp; gold cabin finish.</p>
+          </div>
+        </button>
+
+        <!-- Chapter 4 -->
+        <button class="chapter-card w-full text-left p-3.5 rounded-2xl border border-gray-800 bg-gray-900/60 hover:bg-gray-800/80 transition flex items-start gap-3" onclick="seekChapter(97.04, 'Chapter 4: Multi-Beam Infrared Light Curtain Safety Test', 'Rosy Public School Campus, Jalalabad', this, 'Demo 4 • School Safety')">
+          <div class="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 font-black text-xs shrink-0 mt-0.5">
+            04
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-blue-400">Academic Campus Safety</span>
+              <span class="text-[10px] text-gray-400 font-mono">01:37</span>
+            </div>
+            <h5 class="text-xs font-bold text-white font-heading mt-0.5 truncate">154-Beam Infrared Child Protection</h5>
+            <p class="text-[11px] text-gray-400 mt-0.5 line-clamp-1">Full-height door curtain sensor field test.</p>
+          </div>
+        </button>
+
+        <!-- Chapter 5 -->
+        <button class="chapter-card w-full text-left p-3.5 rounded-2xl border border-gray-800 bg-gray-900/60 hover:bg-gray-800/80 transition flex items-start gap-3" onclick="seekChapter(149.68, 'Chapter 5: S-Curve Smooth Acceleration & Floor Leveling Test', 'Hotel Sunrise, Awas Vikas, Farrukhabad', this, 'Demo 5 • Hotel Lift Drive')">
+          <div class="w-10 h-10 rounded-xl bg-purple-600/20 border border-purple-500/40 flex items-center justify-center text-purple-400 font-black text-xs shrink-0 mt-0.5">
+            05
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-purple-400">Hotel Guest Service</span>
+              <span class="text-[10px] text-gray-400 font-mono">02:29</span>
+            </div>
+            <h5 class="text-xs font-bold text-white font-heading mt-0.5 truncate">S-Curve Jerk-Free Acceleration Test</h5>
+            <p class="text-[11px] text-gray-400 mt-0.5 line-clamp-1">Closed-loop vector inverter ride comfort.</p>
+          </div>
+        </button>
+
+        <!-- Chapter 6 -->
+        <button class="chapter-card w-full text-left p-3.5 rounded-2xl border border-gray-800 bg-gray-900/60 hover:bg-gray-800/80 transition flex items-start gap-3" onclick="seekChapter(210.28, 'Chapter 6: Automatic Rescue Device (ARD) Power Cut Simulation', 'Active Installation Site, Uttar Pradesh', this, 'Demo 6 • ARD Emergency')">
+          <div class="w-10 h-10 rounded-xl bg-rose-600/20 border border-rose-500/40 flex items-center justify-center text-rose-400 font-black text-xs shrink-0 mt-0.5">
+            06
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-rose-400">Emergency Rescue ARD</span>
+              <span class="text-[10px] text-gray-400 font-mono">03:30</span>
+            </div>
+            <h5 class="text-xs font-bold text-white font-heading mt-0.5 truncate">ARD Power Failure Rescue Simulation</h5>
+            <p class="text-[11px] text-gray-400 mt-0.5 line-clamp-1">Auto-leveling to nearest floor upon power cut.</p>
+          </div>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 2: REAL ON-GROUND PHOTOS GALLERY (PROPERLY FRAMED)
+       ======================================================== -->
+  <section id="photos-section" class="py-16 px-4 max-w-7xl mx-auto w-full border-t border-gray-800/80">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-gray-800">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-red-500">Real Project Sites</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-heading mt-1">
+          Authentic On-Ground Installation Photos
+        </h2>
+        <p class="text-gray-400 text-xs sm:text-sm mt-1">
+          Every photo below is from an actual, active installation site. Click any photo to view in Full HD.
+        </p>
+      </div>
+      <div class="mt-3 md:mt-0 text-xs text-gray-400 bg-gray-900 border border-gray-800 px-3 py-1.5 rounded-full w-fit">
+        <i class="fa-solid fa-camera text-red-500 mr-1"></i> Tap to View Fullscreen HD
+      </div>
+    </div>
+
+    <!-- Photos Grid (Responsive with Ambient Backdrop & Perfect Framing) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+      <!-- 1. The Mewar Inn Hotel & Resort -->
+      <div class="media-item glass-card rounded-2xl overflow-hidden flex flex-col group cursor-pointer" onclick="openLightbox('assets/images/clients/hotel-mewar-inn.jpg', 'The Mewar Inn Hotel & Resort', 'Shahjahanpur Landmark • Rooftop Illuminated Lettering & Luxury Elevator')">
+        <div class="relative h-64 overflow-hidden bg-gradient-to-b from-gray-950 to-black flex items-center justify-center p-1">
+          <img src="assets/images/clients/hotel-mewar-inn.jpg" alt="" class="absolute inset-0 w-full h-full object-cover blur-md opacity-35 scale-110 pointer-events-none">
+          <img src="assets/images/clients/hotel-mewar-inn.jpg" alt="The Mewar Inn Hotel Shahjahanpur" class="relative z-10 max-h-full w-auto object-contain group-hover:scale-105 transition duration-500">
+          <span class="absolute top-2.5 left-2.5 z-20 bg-purple-600/90 text-white text-[9px] uppercase font-bold px-2 py-0.5 rounded-full shadow">Luxury Resort</span>
+          <span class="absolute bottom-2.5 right-2.5 z-20 bg-emerald-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
+            <i class="fa-solid fa-camera"></i> Verified Photo
+          </span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-white group-hover:text-purple-400 transition font-heading">The Mewar Inn Hotel &amp; Resort</h3>
+            <p class="text-[11px] text-gray-400 mt-0.5">Shahjahanpur Landmark Site</p>
+            <p class="text-[11px] text-gray-300 mt-1.5 leading-relaxed">Grand hotel installation with glass elevation, modern suites, and high-speed passenger lift.</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-gray-800 flex items-center justify-between text-[10px] text-gray-400">
+            <span><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Shahjahanpur</span>
+            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Active</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Rosy Public School (Main Campus) -->
+      <div class="media-item glass-card rounded-2xl overflow-hidden flex flex-col group cursor-pointer" onclick="openLightbox('assets/images/clients/rosy-public-school.jpg', 'Rosy Public School', 'Jalalabad Campus • Front Sign Board & Academic Building')">
+        <div class="relative h-64 overflow-hidden bg-gradient-to-b from-gray-950 to-black flex items-center justify-center">
+          <img src="assets/images/clients/rosy-public-school.jpg" alt="" class="absolute inset-0 w-full h-full object-cover blur-md opacity-35 scale-110 pointer-events-none">
+          <img src="assets/images/clients/rosy-public-school.jpg" alt="Rosy Public School" class="relative z-10 w-full h-full object-cover object-[center_65%] group-hover:scale-105 transition duration-500">
+          <span class="absolute top-2.5 left-2.5 z-20 bg-pink-600/90 text-white text-[9px] uppercase font-bold px-2 py-0.5 rounded-full shadow">Academic Block</span>
+          <span class="absolute bottom-2.5 right-2.5 z-20 bg-emerald-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
+            <i class="fa-solid fa-camera"></i> Verified Photo
+          </span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-white group-hover:text-pink-400 transition font-heading">Rosy Public School</h3>
+            <p class="text-[11px] text-gray-400 mt-0.5">Mr. Satyamohan Pandey (Jalalabad)</p>
+            <p class="text-[11px] text-gray-300 mt-1.5 leading-relaxed">Multi-floor modern academic building with dedicated student elevator and full child protection.</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-gray-800 flex items-center justify-between text-[10px] text-gray-400">
+            <span><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Jalalabad</span>
+            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Active</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Hotel Mankameshwar -->
+      <div class="media-item glass-card rounded-2xl overflow-hidden flex flex-col group cursor-pointer" onclick="openLightbox('assets/images/clients/hotel-mankameshwar.jpg', 'Hotel Mankameshwar', 'Awas Vikas, Farrukhabad • Hotel Red Neon Sign & SBI Life Building')">
+        <div class="relative h-64 overflow-hidden bg-gradient-to-b from-gray-950 to-black flex items-center justify-center p-1">
+          <img src="assets/images/clients/hotel-mankameshwar.jpg" alt="" class="absolute inset-0 w-full h-full object-cover blur-md opacity-35 scale-110 pointer-events-none">
+          <img src="assets/images/clients/hotel-mankameshwar.jpg" alt="Hotel Mankameshwar" class="relative z-10 max-h-full w-auto object-contain group-hover:scale-105 transition duration-500">
+          <span class="absolute top-2.5 left-2.5 z-20 bg-orange-600/90 text-white text-[9px] uppercase font-bold px-2 py-0.5 rounded-full shadow">Hospitality</span>
+          <span class="absolute bottom-2.5 right-2.5 z-20 bg-emerald-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
+            <i class="fa-solid fa-camera"></i> Verified Photo
+          </span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-white group-hover:text-orange-400 transition font-heading">Hotel Mankameshwar</h3>
+            <p class="text-[11px] text-gray-400 mt-0.5">Mr. Manoj Gangwar (Awas Vikas)</p>
+            <p class="text-[11px] text-gray-300 mt-1.5 leading-relaxed">Commercial hotel building with red neon sign and reliable passenger elevator service.</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-gray-800 flex items-center justify-between text-[10px] text-gray-400">
+            <span><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Farrukhabad</span>
+            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Active</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Hotel Sunrise -->
+      <div class="media-item glass-card rounded-2xl overflow-hidden flex flex-col group cursor-pointer" onclick="openLightbox('assets/images/clients/hotel-sunrise.jpg', 'Hotel Sunrise', 'Awas Vikas, Farrukhabad • AC Room Hotel Sunrise Entrance & Board')">
+        <div class="relative h-64 overflow-hidden bg-gradient-to-b from-gray-950 to-black flex items-center justify-center">
+          <img src="assets/images/clients/hotel-sunrise.jpg" alt="" class="absolute inset-0 w-full h-full object-cover blur-md opacity-35 scale-110 pointer-events-none">
+          <img src="assets/images/clients/hotel-sunrise.jpg" alt="Hotel Sunrise" class="relative z-10 w-full h-full object-cover object-[top_center] group-hover:scale-105 transition duration-500">
+          <span class="absolute top-2.5 left-2.5 z-20 bg-amber-600/90 text-white text-[9px] uppercase font-bold px-2 py-0.5 rounded-full shadow">Hospitality</span>
+          <span class="absolute bottom-2.5 right-2.5 z-20 bg-emerald-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
+            <i class="fa-solid fa-camera"></i> Verified Photo
+          </span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-white group-hover:text-amber-400 transition font-heading">Hotel Sunrise</h3>
+            <p class="text-[11px] text-gray-400 mt-0.5">Mr. Durgesh Patel (Awas Vikas)</p>
+            <p class="text-[11px] text-gray-300 mt-1.5 leading-relaxed">Dedicated guest service lift with feather-touch COP and smooth VVVF ride control.</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-gray-800 flex items-center justify-between text-[10px] text-gray-400">
+            <span><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Farrukhabad</span>
+            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Active</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Modern Food Court -->
+      <div class="media-item glass-card rounded-2xl overflow-hidden flex flex-col group cursor-pointer" onclick="openLightbox('assets/images/clients/modern-food-court.jpg', 'Modern Food Court & Retail', 'Farrukhabad • Multi-Cuisine Dining & Commercial Center')">
+        <div class="relative h-64 overflow-hidden bg-gradient-to-b from-gray-950 to-black flex items-center justify-center">
+          <img src="assets/images/clients/modern-food-court.jpg" alt="" class="absolute inset-0 w-full h-full object-cover blur-md opacity-35 scale-110 pointer-events-none">
+          <img src="assets/images/clients/modern-food-court.jpg" alt="Modern Food Court" class="relative z-10 w-full h-full object-cover object-[top_center] group-hover:scale-105 transition duration-500">
+          <span class="absolute top-2.5 left-2.5 z-20 bg-red-600/90 text-white text-[9px] uppercase font-bold px-2 py-0.5 rounded-full shadow">Food Court &amp; Retail</span>
+          <span class="absolute bottom-2.5 right-2.5 z-20 bg-emerald-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
+            <i class="fa-solid fa-camera"></i> Verified Photo
+          </span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition font-heading">Modern Food Court &amp; Retail</h3>
+            <p class="text-[11px] text-gray-400 mt-0.5">Modern Group (Farrukhabad)</p>
+            <p class="text-[11px] text-gray-300 mt-1.5 leading-relaxed">Commercial multi-cuisine family dining complex with heavy-traffic commercial elevator.</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-gray-800 flex items-center justify-between text-[10px] text-gray-400">
+            <span><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Farrukhabad</span>
+            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Active</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Future University -->
+      <div class="media-item glass-card rounded-2xl overflow-hidden flex flex-col group cursor-pointer" onclick="openLightbox('assets/images/clients/future-university.jpg', 'Future University', 'Bareilly Campus • Main University Entrance & High-Speed Elevators')">
+        <div class="relative h-64 overflow-hidden bg-gradient-to-b from-gray-950 to-black flex items-center justify-center">
+          <img src="assets/images/clients/future-university.jpg" alt="" class="absolute inset-0 w-full h-full object-cover blur-md opacity-35 scale-110 pointer-events-none">
+          <img src="assets/images/clients/future-university.jpg" alt="Future University" class="relative z-10 w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+          <span class="absolute top-2.5 left-2.5 z-20 bg-blue-600/90 text-white text-[9px] uppercase font-bold px-2 py-0.5 rounded-full shadow">Higher Education</span>
+          <span class="absolute bottom-2.5 right-2.5 z-20 bg-emerald-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
+            <i class="fa-solid fa-camera"></i> Verified Photo
+          </span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-white group-hover:text-blue-400 transition font-heading">Future University</h3>
+            <p class="text-[11px] text-gray-400 mt-0.5">Bareilly Campus (Uttar Pradesh)</p>
+            <p class="text-[11px] text-gray-300 mt-1.5 leading-relaxed">Large-scale educational campus high-speed student and administrative building elevators.</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-gray-800 flex items-center justify-between text-[10px] text-gray-400">
+            <span><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Bareilly</span>
+            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Active</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Jograj Memorial Hospital -->
+      <div class="media-item glass-card rounded-2xl overflow-hidden flex flex-col group cursor-pointer" onclick="openLightbox('assets/images/clients/jograj-hospital.jpg', 'Jograj Memorial Heart Hospital', 'Badhpur, Farrukhabad • Stretcher Elevator & Cardiac Care')">
+        <div class="relative h-64 overflow-hidden bg-gradient-to-b from-gray-950 to-black flex items-center justify-center">
+          <img src="assets/images/clients/jograj-hospital.jpg" alt="" class="absolute inset-0 w-full h-full object-cover blur-md opacity-35 scale-110 pointer-events-none">
+          <img src="assets/images/clients/jograj-hospital.jpg" alt="Jograj Hospital" class="relative z-10 w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+          <span class="absolute top-2.5 left-2.5 z-20 bg-red-600/90 text-white text-[9px] uppercase font-bold px-2 py-0.5 rounded-full shadow">Healthcare</span>
+          <span class="absolute bottom-2.5 right-2.5 z-20 bg-emerald-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
+            <i class="fa-solid fa-camera"></i> Verified Photo
+          </span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition font-heading">Jograj Memorial Hospital</h3>
+            <p class="text-[11px] text-gray-400 mt-0.5">Dr. Udai Raj Singh (Badhpur)</p>
+            <p class="text-[11px] text-gray-300 mt-1.5 leading-relaxed">Dedicated cardiac emergency bed and stretcher elevator with medical priority override.</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-gray-800 flex items-center justify-between text-[10px] text-gray-400">
+            <span><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Farrukhabad</span>
+            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Active</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Gurukul World School -->
+      <div class="media-item glass-card rounded-2xl overflow-hidden flex flex-col group cursor-pointer" onclick="openLightbox('assets/images/clients/gurukul-world-school.jpg', 'Gurukul World School', 'Kadri Gate, Farrukhabad • Entrance Facade & Campus Lift')">
+        <div class="relative h-64 overflow-hidden bg-gradient-to-b from-gray-950 to-black flex items-center justify-center">
+          <img src="assets/images/clients/gurukul-world-school.jpg" alt="" class="absolute inset-0 w-full h-full object-cover blur-md opacity-35 scale-110 pointer-events-none">
+          <img src="assets/images/clients/gurukul-world-school.jpg" alt="Gurukul World School" class="relative z-10 w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+          <span class="absolute top-2.5 left-2.5 z-20 bg-orange-600/90 text-white text-[9px] uppercase font-bold px-2 py-0.5 rounded-full shadow">Education</span>
+          <span class="absolute bottom-2.5 right-2.5 z-20 bg-emerald-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
+            <i class="fa-solid fa-camera"></i> Verified Photo
+          </span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-white group-hover:text-orange-400 transition font-heading">Gurukul World School</h3>
+            <p class="text-[11px] text-gray-400 mt-0.5">Mr. Pramod Agrawal (Kadri Gate)</p>
+            <p class="text-[11px] text-gray-300 mt-1.5 leading-relaxed">Integrated student elevator with heavy-duty entrance door sill and child safety sensors.</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-gray-800 flex items-center justify-between text-[10px] text-gray-400">
+            <span><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Farrukhabad</span>
+            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Active</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="py-14 px-4 bg-gradient-to-r from-red-950/40 via-red-900/30 to-black border-y border-red-900/40">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-heading">
+        Planning an Elevator for Your Building?
+      </h2>
+      <p class="mt-3 text-sm sm:text-base text-gray-300">
+        Direct manufacturer pricing, prompt installation, and 24/7 lifetime emergency service across Uttar Pradesh.
+      </p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+        <a href="tel:+918604813332" class="btn-apex px-6 py-3.5 rounded-xl text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2">
+          <i class="fa-solid fa-phone"></i> Call Mr. Santosh: 86048 13332
+        </a>
+        <a href="https://wa.me/917014059334" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3.5 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition flex items-center gap-2 shadow-lg">
+          <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Quick Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (MANAGED BY QUBE TECH SYSTEMS ONLY) -->
+  <footer class="bg-black text-gray-400 text-xs border-t border-gray-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-xl font-black text-white font-heading">APEXON</span>
+          <span class="text-xl font-black text-red-500 font-heading">LIFTS</span>
+        </div>
+        <p class="text-xs text-gray-400 leading-relaxed max-w-md">
+          Founded by Mr. Santosh Kashyap. Premier elevator manufacturer delivering high-speed commercial elevators, residential villa home lifts, and heavy hospital stretcher elevators with 30+ completed landmarks in Uttar Pradesh.
+        </p>
+        <p class="mt-3 text-xs text-gray-500">
+          <i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> Head Office: Awas Vikas, Farrukhabad, Uttar Pradesh
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-3 font-heading">Active Service Network</h4>
+        <ul class="space-y-1.5 text-xs">
+          <li>Farrukhabad &amp; Fatehgarh</li>
+          <li>Shahjahanpur &amp; Jalalabad</li>
+          <li>Hardoi &amp; Kannauj</li>
+          <li>Kanpur &amp; Lucknow</li>
+          <li>Agra, Etah &amp; Etawah</li>
+          <li>Budaun &amp; Bareilly</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-3 font-heading">24/7 Helpline</h4>
+        <div class="space-y-2">
+          <a href="tel:+918604813332" class="text-white font-bold text-sm block hover:text-red-400 transition">
+            <i class="fa-solid fa-phone text-red-500 mr-1.5"></i> +91 86048 13332
+          </a>
+          <a href="https://wa.me/917014059334" target="_blank" class="text-green-400 font-bold text-xs block hover:text-green-300 transition">
+            <i class="fa-brands fa-whatsapp mr-1.5"></i> +91 70140 59334 (WhatsApp)
+          </a>
+          <p class="text-[11px] text-gray-500 mt-2">Emergency Breakdown Service Available Round The Clock</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Agency attribution strictly in footer copyright bar -->
+    <div class="border-t border-gray-900 bg-gray-950 py-4 px-4 text-center text-[11px] text-gray-500">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p>© 2026 Apexon Lifts. All rights reserved.</p>
+        <p>
+          Managed by <a href="https://www.qubeetechsystems.in/" target="_blank" rel="noopener noreferrer" class="text-red-400 hover:text-red-300 font-semibold underline underline-offset-2 transition">Cube Tech Systems</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN HD LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-[100000] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300" onclick="closeLightbox()">
+    <button class="absolute top-5 right-5 w-11 h-11 rounded-full bg-gray-900/90 text-white flex items-center justify-center text-lg border border-white/20 hover:bg-red-600 transition" onclick="closeLightbox()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-5xl max-h-[82vh] overflow-hidden rounded-2xl border border-white/10 shadow-2xl relative" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="Full Preview" class="w-full h-full max-h-[75vh] object-contain bg-black">
+      <div class="p-4 bg-gray-950/90 border-t border-white/10 text-center">
+        <h4 id="lightbox-title" class="text-base font-bold text-white font-heading"></h4>
+        <p id="lightbox-desc" class="text-xs text-gray-400 mt-0.5"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING CALL & WHATSAPP BUTTONS -->
+  <div class="fixed bottom-6 right-5 z-40 flex flex-col gap-3">
+    <a href="https://wa.me/917014059334" target="_blank" class="w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center text-xl shadow-2xl transition hover:scale-110" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="tel:+918604813332" class="w-12 h-12 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center text-lg shadow-2xl transition hover:scale-110" title="Emergency Call">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+
+  <!-- JAVASCRIPT CONTROLLERS -->
+  <script>
+    // Mobile Drawer Toggle
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const closeBtn = document.getElementById('mobile-drawer-close');
+    const drawer = document.getElementById('mobile-drawer');
+
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', () => { drawer.style.display = 'flex'; });
+    }
+    if (closeBtn && drawer) {
+      closeBtn.addEventListener('click', () => { drawer.style.display = 'none'; });
+    }
+
+    // Unified Master Video Player & Chapter Controller
+    const masterVideo = document.getElementById('master-video');
+    const masterPlayBtn = document.getElementById('master-play-btn');
+    const liveChapterBadge = document.getElementById('live-chapter-badge');
+    const currentTitle = document.getElementById('current-title');
+    const currentLocation = document.getElementById('current-location');
+
+    function toggleMasterPlay() {
+      if (!masterVideo) return;
+      if (masterVideo.paused) {
+        masterVideo.play();
+        if (masterPlayBtn) masterPlayBtn.style.opacity = '0';
+      } else {
+        masterVideo.pause();
+        if (masterPlayBtn) masterPlayBtn.style.opacity = '1';
+      }
+    }
+
+    if (masterVideo) {
+      masterVideo.addEventListener('play', () => {
+        if (masterPlayBtn) masterPlayBtn.style.opacity = '0';
+      });
+      masterVideo.addEventListener('pause', () => {
+        if (masterPlayBtn) masterPlayBtn.style.opacity = '1';
+      });
+      masterVideo.addEventListener('click', toggleMasterPlay);
+    }
+
+    function seekChapter(timeInSeconds, title, location, btnElement, badgeText) {
+      if (!masterVideo) return;
+
+      // Update active card styling
+      document.querySelectorAll('.chapter-card').forEach(c => c.classList.remove('active'));
+      if (btnElement) btnElement.classList.add('active');
+
+      // Update info
+      if (currentTitle) currentTitle.textContent = title;
+      if (currentLocation) currentLocation.innerHTML = `<i class="fa-solid fa-location-dot text-red-500 mr-1"></i> ${location}`;
+      if (liveChapterBadge) liveChapterBadge.textContent = badgeText;
+
+      // Seek & Play
+      masterVideo.currentTime = timeInSeconds;
+      masterVideo.play();
+      if (masterPlayBtn) masterPlayBtn.style.opacity = '0';
+
+      // Scroll smoothly to player if on mobile
+      if (window.innerWidth < 1024) {
+        masterVideo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    // Lightbox Controls
+    const modal = document.getElementById('lightbox-modal');
+    const modalImg = document.getElementById('lightbox-img');
+    const modalTitle = document.getElementById('lightbox-title');
+    const modalDesc = document.getElementById('lightbox-desc');
+
+    function openLightbox(src, title, desc) {
+      if (!modal) return;
+      modalImg.src = src;
+      modalTitle.textContent = title;
+      modalDesc.textContent = desc;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      if (!modal) return;
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // STRICT ANTI-DOWNLOAD DRM PROTECTION
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.closest('.secure-video-wrapper') || e.target.tagName === 'VIDEO' || e.target.tagName === 'IMG') {
+        e.preventDefault();
+        showSecurityAlert();
+        return false;
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U')) || e.key === 'F12') {
+        if (document.querySelector('.secure-video-wrapper:hover') || document.querySelector('.chapter-card:hover')) {
+          e.preventDefault();
+          showSecurityAlert();
+          return false;
+        }
+      }
+    });
+
+    function showSecurityAlert() {
+      let toast = document.getElementById('sec-alert');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'sec-alert';
+        toast.className = 'fixed bottom-10 left-1/2 -translate-x-1/2 z-[100000] bg-red-600/95 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-2xl flex items-center gap-2 border border-white/20 transition-all duration-300';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = '<i class="fa-solid fa-lock"></i> Protected Media: Direct download is restricted by Apexon Lifts.';
+      toast.style.opacity = '1';
+      toast.style.transform = 'translate(-50%, 0)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translate(-50%, 20px)';
+      }, 2500);
+    }
+  </script>
+
+</body>
+</html>
