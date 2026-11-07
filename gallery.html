@@ -3,9 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Media Gallery | Apexon Lifts - Live Installation Videos & Real Project Sites</title>
-  <meta name="description" content="Watch authentic live elevator demonstrations and on-ground project photos of Apexon Lifts across Uttar Pradesh. Hospitals, schools, luxury hotels and residential elevators.">
+  <title>Apexon Lifts Video Gallery | Real Elevator Installation Videos in Farrukhabad, Hardoi, Shahjahanpur, Sitapur & UP</title>
+  <meta name="description" content="Watch authentic vertical on-site elevator installation videos by Apexon Lifts. Hospital bed lifts, glass capsule elevators & residential villa home lifts in Farrukhabad, Hardoi, Shahjahanpur, Sitapur, Lakhimpur & Central UP. Call +91 86048 13332.">
+  <meta name="keywords" content="lift company in Farrukhabad, lift company near me, elevator company near me, best lift company in Hardoi, elevator company in Shahjahanpur, lift company in Sitapur, lift company in Lakhimpur, elevator installation video, Apexon Lifts video gallery, Santosh Kashyap">
   <meta name="theme-color" content="#070A12">
+  <link rel="canonical" href="https://www.apexonlifts.com/gallery.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="geo.region" content="IN-UP">
+  <meta name="geo.placename" content="Farrukhabad, Hardoi, Shahjahanpur, Sitapur, Lakhimpur, Uttar Pradesh">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Apexon Lifts",
+    "alternateName": "Apexon Elevators",
+    "description": "Premier lift company and elevator manufacturer in Farrukhabad, Hardoi, Shahjahanpur, Sitapur, Lakhimpur and Uttar Pradesh.",
+    "url": "https://www.apexonlifts.com/gallery.html",
+    "telephone": "+918604813332",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Farrukhabad",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    },
+    "areaServed": [
+      "Farrukhabad", "Fatehgarh", "Hardoi", "Shahjahanpur", "Sitapur", "Lakhimpur Kheri", "Kannauj", "Mainpuri", "Etawah", "Etah", "Budaun", "Bareilly", "Kanpur", "Lucknow", "Uttar Pradesh"
+    ]
+  }
+  </script>
 
   <!-- Tailwind CSS & Google Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -217,12 +244,12 @@
     <!-- Master Player + Chapter Sidebar Layout -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-      <!-- LEFT: VIDEO PLAYER (lg:col-span-7) -->
-      <div class="lg:col-span-7 space-y-4">
-        <div class="relative rounded-3xl overflow-hidden border border-gray-800 shadow-2xl bg-black" oncontextmenu="return false;">
+            <!-- LEFT: VERTICAL 9:16 SMARTPHONE VIDEO PLAYER (lg:col-span-5) -->
+      <div class="lg:col-span-5 flex flex-col items-center">
+        <div class="w-full max-w-[380px] sm:max-w-[420px] rounded-3xl overflow-hidden border border-gray-800 shadow-2xl bg-black relative" oncontextmenu="return false;">
           <video 
             id="master-video" 
-            class="w-full aspect-video sm:aspect-[9/13] max-h-[580px] object-contain bg-black mx-auto block" 
+            class="w-full aspect-[9/16] object-contain bg-black mx-auto block rounded-2xl" 
             controls 
             playsinline 
             webkit-playsinline
@@ -239,24 +266,27 @@
           <!-- Subtle Live Badge -->
           <div class="absolute top-3 left-3 flex items-center gap-2 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 pointer-events-none">
             <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-            <span id="live-chapter-badge" class="text-[10px] font-bold text-white uppercase tracking-wider">Demo 1 • Hospital Bed Lift</span>
+            <span id="live-chapter-badge" class="text-[10px] font-bold text-white uppercase tracking-wider">Demo 1 – Hospital Bed Lift</span>
           </div>
         </div>
 
-        <!-- Current Chapter Info Bar -->
-        <div class="p-4 rounded-2xl bg-gray-900/90 border border-gray-800 flex items-center justify-between">
+        <!-- Current Chapter Info Bar (Vertical Stacked & Responsive) -->
+        <div class="w-full max-w-[380px] sm:max-w-[420px] mt-4 p-4 rounded-2xl bg-gray-900/90 border border-gray-800 flex items-center justify-between">
           <div>
-            <h4 id="current-title" class="text-sm font-bold text-white font-heading">Chapter 1: Medical Bed &amp; Stretcher Elevator Operation</h4>
-            <p id="current-location" class="text-xs text-gray-400 mt-0.5"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Jograj Memorial Heart Hospital, Badhpur, Farrukhabad</p>
+            <span class="text-[10px] text-red-400 font-bold uppercase tracking-wider block">Now Playing On-Site</span>
+            <h3 id="current-title" class="text-sm sm:text-base font-bold text-white mt-0.5">Medical Bed & Stretcher Elevator Operation</h3>
+            <p id="current-location" class="text-xs text-gray-400 mt-1">
+              <i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Jograj Memorial Heart Hospital, Badhpur, Farrukhabad
+            </p>
           </div>
-          <span class="text-emerald-400 text-xs font-bold px-2.5 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20 whitespace-nowrap">
-            <i class="fa-solid fa-check-circle mr-1"></i> Verified Site
-          </span>
+          <div class="w-9 h-9 rounded-xl bg-red-600/10 border border-red-500/20 text-red-500 flex items-center justify-center text-sm shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </div>
         </div>
       </div>
 
-      <!-- RIGHT: CHAPTER SELECTOR LIST (lg:col-span-5) -->
-      <div class="lg:col-span-5 space-y-3">
+      <!-- RIGHT: CHAPTER SELECTOR LIST (lg:col-span-7) -->
+      <div class="lg:col-span-7 space-y-3">
         <div class="flex items-center justify-between pb-2 border-b border-gray-800">
           <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Select Demonstration:</span>
           <span class="text-[11px] text-red-400 font-semibold"><i class="fa-solid fa-hand-pointer mr-1"></i> Click to Play Chapter</span>
